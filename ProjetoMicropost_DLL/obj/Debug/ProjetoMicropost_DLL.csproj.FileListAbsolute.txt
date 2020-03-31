@@ -1,6 +1,5 @@
 c:\users\alecsandro rocha\documents\visual studio 2015\Projects\ProjetoMicropost_DLL\ProjetoMicropost_DLL\bin\Debug\ProjetoMicropost_DLL.dll.config
 c:\users\alecsandro rocha\documents\visual studio 2015\Projects\ProjetoMicropost_DLL\ProjetoMicropost_DLL\bin\Debug\ProjetoMicropost_DLL.dll
 c:\users\alecsandro rocha\documents\visual studio 2015\Projects\ProjetoMicropost_DLL\ProjetoMicropost_DLL\bin\Debug\ProjetoMicropost_DLL.pdb
-c:\users\alecsandro rocha\documents\visual studio 2015\Projects\ProjetoMicropost_DLL\ProjetoMicropost_DLL\obj\Debug\ProjetoMicropost_DLL.csprojResolveAssemblyReference.cache
 c:\users\alecsandro rocha\documents\visual studio 2015\Projects\ProjetoMicropost_DLL\ProjetoMicropost_DLL\obj\Debug\ProjetoMicropost_DLL.dll
 c:\users\alecsandro rocha\documents\visual studio 2015\Projects\ProjetoMicropost_DLL\ProjetoMicropost_DLL\obj\Debug\ProjetoMicropost_DLL.pdb

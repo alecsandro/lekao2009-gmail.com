@@ -11,7 +11,7 @@ using System.ServiceModel;
 namespace ProjetoMicropost_DLL
 {
     public class ClasseMetodos
-        
+
     {
         //ws prod producao
         public ProjetoMicropost_DLL.serviceMicropost.Service1SoapClient wsProd;
@@ -31,7 +31,26 @@ namespace ProjetoMicropost_DLL
 
             wsHomo = new Homologacao.Service1SoapClient(Tbinding, endereco);
         }
-        
+
+
+        public string metodoquerecebe(string parametro1, string parametro2, string parametro3)
+        {
+            return "OK";
+        }
+
+        public string metodo30parametrosFoxChama(string xparametro)
+        {
+
+            //recebe do fox string assim "VALOR1#VALOR2#VALOR3#"
+
+            //retornar uma string igual getwordcount e getwordnum...
+            string[] lcpartes = xparametro.Split('#');
+
+            return metodoquerecebe(lcpartes[0], lcpartes[1], lcpartes[3]);
+
+        }
+
+
         public string SerializarObjeto(Object objeto)
         {
             string xml = "";
@@ -49,7 +68,7 @@ namespace ProjetoMicropost_DLL
         public string RetornaTeste(string cep = "13060705", string user = "HomologacaoMP", string pass = "Dej6PFEcPiNGyHm1JK")
         {
             Homologacao.EnderecoMp endere = new Homologacao.EnderecoMp();
-            endere = wsHomo.RetornaEndereco( cep,  user, pass);
+            endere = wsHomo.RetornaEndereco(cep, user, pass);
 
             string ObjetoSerializado = this.SerializarObjeto(endere);
 
@@ -57,7 +76,7 @@ namespace ProjetoMicropost_DLL
         }
 
 
-        
+
 
 
 
