@@ -1,0 +1,3156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://webservice.prepostagem.com.br/MpWebService.asmx" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s1="http://webservice.prepostagem.com.br/MpWebService.asmx/AbstractTypes" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://webservice.prepostagem.com.br/MpWebService.asmx" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://webservice.prepostagem.com.br/MpWebService.asmx">
+      <s:element name="PrePostarObjetoComRegistro">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cnpj" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="numeroCartao" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nomeDestinatario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="enderecoDestinatario" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="numeroDestinatario" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="complementoDestinatario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="bairroDestinatario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ufDestinatario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cidadeDestinatario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cepDestinatario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="notaFiscal" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Pedido" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="codigoDoServico" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="pesoReal" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="valorDeclarado" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="altura" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="largura" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="comprimento" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="avisoDeRecebimento" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="numeroDeRegistro" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="conteudos" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="celularDestinatario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="senha" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PrePostarObjetoComRegistroResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PrePostarObjetoComRegistroResult" type="tns:dadosTarifaRetorno" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="dadosTarifaRetorno">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="numeroRegistro" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="avisoCorreios" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DescricaoServico" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="codigo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="mMsgErro" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="valor" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="valorAvisoRecebimento" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="valorValorDeclarado" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="valorMaoPropria" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="prazoEntrega" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="entregaDomiciliar" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="entregaSabado" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="erro" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="PrePostarObjeto">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cnpj" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="numeroCartao" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nomeDestinatario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="enderecoDestinatario" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="numeroDestinatario" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="complementoDestinatario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="bairroDestinatario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ufDestinatario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cidadeDestinatario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cepDestinatario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="notaFiscal" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Pedido" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="codigoDoServico" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="pesoReal" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="valorDeclarado" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="altura" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="largura" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="comprimento" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="avisoDeRecebimento" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="numeroDeRegistro" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="conteudos" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="celularDestinatario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="senha" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PrePostarObjetoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PrePostarObjetoResult" type="tns:dadosTarifaRetorno" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PrePostarObjetoV4">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cnpj" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="numeroCartao" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nomeDestinatario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="enderecoDestinatario" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="numeroDestinatario" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="complementoDestinatario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="bairroDestinatario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ufDestinatario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cidadeDestinatario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cepDestinatario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="notaFiscal" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Pedido" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="codigoDoServico" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="pesoReal" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="valorDeclarado" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="altura" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="largura" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="comprimento" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="avisoDeRecebimento" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="maoPropria" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="numeroDeRegistro" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="observacoes" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="celularDestinatario" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="descConteudo" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="listaConteudo" type="tns:ArrayOfConteudo" />
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="senha" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfConteudo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Conteudo" nillable="true" type="tns:Conteudo" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Conteudo">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="quantidade" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="descricao" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="valor" type="s:decimal" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="PrePostarObjetoV4Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PrePostarObjetoV4Result" type="tns:dadosTarifaRetorno" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PrePostarObjetoV4_withCpfCnpjParameter">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cnpj" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="numeroCartao" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nomeDestinatario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="enderecoDestinatario" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="numeroDestinatario" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="complementoDestinatario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="bairroDestinatario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ufDestinatario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cidadeDestinatario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cepDestinatario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cpfCnpjDestinatario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="notaFiscal" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Pedido" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="codigoDoServico" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="pesoReal" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="valorDeclarado" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="altura" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="largura" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="comprimento" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="avisoDeRecebimento" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="maoPropria" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="numeroDeRegistro" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="observacoes" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="celularDestinatario" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="descConteudo" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="listaConteudo" type="tns:ArrayOfConteudo" />
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="senha" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PrePostarObjetoV4_withCpfCnpjParameterResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PrePostarObjetoV4_withCpfCnpjParameterResult" type="tns:dadosTarifaRetorno" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PrePostarObjetoV5">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cnpj" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="numeroCartao" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nomeDestinatario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="enderecoDestinatario" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="numeroDestinatario" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="complementoDestinatario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="bairroDestinatario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ufDestinatario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cidadeDestinatario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cepDestinatario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cpfCnpjDestinatario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="notaFiscal" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Pedido" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="codigoDoServico" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="pesoReal" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="valorDeclarado" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="altura" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="largura" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="comprimento" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="diametro" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="tipoEmbalagem" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="avisoDeRecebimento" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="maoPropria" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="numeroDeRegistro" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="observacoes" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="celularDestinatario" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="descConteudo" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="listaConteudo" type="tns:ArrayOfConteudo" />
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="senha" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PrePostarObjetoV5Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PrePostarObjetoV5Result" type="tns:dadosTarifaRetorno" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidarPostagem">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cnpj" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="numeroCartao" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nomeDestinatario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="enderecoDestinatario" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="numeroDestinatario" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="complementoDestinatario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="bairroDestinatario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ufDestinatario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cidadeDestinatario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cepDestinatario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cpfCnpjDestinatario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="notaFiscal" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Pedido" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="codigoDoServico" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="pesoReal" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="valorDeclarado" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="altura" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="largura" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="comprimento" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="diametro" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="tipoEmbalagem" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="avisoDeRecebimento" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="maoPropria" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="numeroDeRegistro" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="observacoes" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="celularDestinatario" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="descConteudo" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="listaConteudo" type="tns:ArrayOfConteudo" />
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="senha" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidarPostagemResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ValidarPostagemResult" type="tns:dadosTarifaRetorno" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RetornaOrcamentoV2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cnpj" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="numeroCartao" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cepDestino" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pesoReal" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="valorDeclarado" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="altura" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="largura" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="comprimento" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="avisoDeRecebimento" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="senha" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RetornaOrcamentoV2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RetornaOrcamentoV2Result" type="tns:ArrayOfDadosTarifaRetorno" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfDadosTarifaRetorno">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="dadosTarifaRetorno" nillable="true" type="tns:dadosTarifaRetorno" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="RetornaOrcamento">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cnpj" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="numeroCartao" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cepDestino" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pesoReal" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="valorDeclarado" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="altura" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="largura" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="comprimento" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="avisoDeRecebimento" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="senha" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RetornaOrcamentoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RetornaOrcamentoResult" type="tns:ArrayOfDadosTarifaRetorno" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RetornaEndereco">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cep" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="senha" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RetornaEnderecoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RetornaEnderecoResult" type="tns:EnderecoMp" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="EnderecoMp">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="logradouro" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="numero" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="complemento" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="complemento2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="bairro" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="cidade" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="estado" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="cep" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="codErro" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="msgErro" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="RetornaStatusDoObjeto">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cnpj" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="numeroCartao" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="numeroRegistro" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="senha" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RetornaStatusDoObjetoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RetornaStatusDoObjetoResult" type="tns:ArrayOfEventoObjeto" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfEventoObjeto">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="EventoObjeto" nillable="true" type="tns:EventoObjeto" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="EventoObjeto">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="numero" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Tipo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Status" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DataEvento" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="DataDaBusca" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Descricao" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Recebedor" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Documento" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Comentario" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Local" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Bairro" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Codigo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Cidade" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Uf" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Sto" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LocalDestino" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CodigoDestino" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CidadeDestino" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BiarroDestino" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UfDestino" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="novoStatus" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="RetornaStatusCompletoDoObjeto">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cnpj" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="numeroCartao" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="numeroRegistro" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="senha" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RetornaStatusCompletoDoObjetoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RetornaStatusCompletoDoObjetoResult" type="tns:ArrayOfEventoObjetoCompleto" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfEventoObjetoCompleto">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="EventoObjetoCompleto" nillable="true" type="tns:EventoObjetoCompleto" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="EventoObjetoCompleto">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:EventoObjeto">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="DetalhesRetirar" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="CodigoRetirar" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="CepRetirar" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="EnderecoRetirar" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="NumeroRetirar" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="CidadeRetirar" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="UFRetirar" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="BairroRetirar" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="solicitarAutorizacaoDePostagem">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cnpj" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="numeroCartao" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nomeDestinatario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="enderecoDestinatario" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="numeroDestinatario" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="complementoDestinatario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="bairroDestinatario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ufDestinatario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cidadeDestinatario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cepRemetente" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cepDestinatario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="notaFiscal" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Pedido" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="codigoDoServico" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="valorDeclarado" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="avisoDeRecebimento" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="celularDestinatario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="senha" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="solicitarAutorizacaoDePostagemResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="solicitarAutorizacaoDePostagemResult" type="tns:dadosTarifaRetorno" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PrePostarObjetoCompleto">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cnpj" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="numeroCartao" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nomeDestinatario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="enderecoDestinatario" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="numeroDestinatario" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="complementoDestinatario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="bairroDestinatario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ufDestinatario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cidadeDestinatario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cepDestinatario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="notaFiscal" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Pedido" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="codigoDoServico" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="pesoReal" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="valorDeclarado" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="altura" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="largura" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="comprimento" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="avisoDeRecebimento" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="maoPropria" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="numeroDeRegistro" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="observacoes" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="celularDestinatario" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="descConteudo" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="listaConteudo" type="tns:ArrayOfConteudo" />
+            <s:element minOccurs="1" maxOccurs="1" name="impressoraZebra" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="senha" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PrePostarObjetoCompletoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PrePostarObjetoCompletoResult" type="tns:postagemRetorno" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="postagemRetorno">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:dadosTarifaRetorno">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="pdfEtiqueta" type="s:base64Binary" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="RetornaEtiquetasParaImpressao">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cnpj" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="numeroCartao" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="registros" type="tns:ArrayOfString" />
+            <s:element minOccurs="1" maxOccurs="1" name="impressoraZebra" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="senha" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="RetornaEtiquetasParaImpressaoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RetornaEtiquetasParaImpressaoResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RetornaURLEtiquetas">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cnpj" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="numeroCartao" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="registros" type="tns:ArrayOfString" />
+            <s:element minOccurs="1" maxOccurs="1" name="impressoraZebra" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="senha" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RetornaURLEtiquetasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RetornaURLEtiquetasResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AtualizaDadosAcc1">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="numeracaoIdRegistros" type="tns:ArrayOfRetornaDados" />
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="senha" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfRetornaDados">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="RetornaDados" nillable="true" type="tns:RetornaDados" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="RetornaDados">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ConteudoDescrito" type="tns:ArrayOfConteudo" />
+          <s:element minOccurs="0" maxOccurs="1" name="Versao" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TipoPesquisa" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TipoResultado" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DiretoriaRegional" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="codigoSto" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="idPlp" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="idPlpSara" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Transportadora" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NomeCliente" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="idCliVisual" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="idDptoVisual" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NomeDpto" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NumeroContrato" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NumeroCartao" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="numeroAdministrativo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="enderecoRemetente" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="numeroCnpjRemetente" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CepRemetente" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="complementoRemetente" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="bairroRemetente" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="cidadeRemetente" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ufRemetente" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="faturado" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="acao_Bloqueio" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="tipo_Bloqueio" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="msg_Bloqueio" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MsgErro" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NotaFiscal" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Pedido" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Contrato" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Destinatario" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CpfCnpj" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Endereco" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Complemento" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Bairro" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Cidade" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Uf" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Cep" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Ar" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="mp" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Tipo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="maoPropria" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="outrosFormatos" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="arDigital" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="postaRestante" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="celularDestinatario" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="avisoCorreios" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AgenciaCliqueRetire" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="prioridadePostagem" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RegistroARDigital" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PedidoEcommerce" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="chaveNfe" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Anotacoes" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="pdfNotaFiscal" type="s:base64Binary" />
+          <s:element minOccurs="0" maxOccurs="1" name="pdfEtiqueta" type="s:base64Binary" />
+          <s:element minOccurs="1" maxOccurs="1" name="numeroRemetente" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="IdCartao" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="idCliente" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="IdDepartamento" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="qtdAtivacaoRastreio" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="qtdAtivacaoEmail" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="IdUsuario" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Qtd" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Servico" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="_servico_auxiliar" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Peso" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Cubico" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Limite_cubico" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="DH" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="IdEtiquetas" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="NumeroDestinatario" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="IdDados" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="PrazoEntrega" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="etiquetaLogica" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="objetoFinalizado" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="objetoTratatoSVP" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="item" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="lote" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="IdSequenciaARDigital" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="IdArquivoARDigital" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="tipoRegistro" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="objeto_bloqueado" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="origemDosDados" type="tns:OrigemDeEntradaDosDados" />
+          <s:element minOccurs="1" maxOccurs="1" name="Largura" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="Altura" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="Comprimento" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="Diametro" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="ValorDcl" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="vlrAdicional" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="vlrMaoPropria" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="VlrPostagem" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="vlrCorreioWebService" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="vlrServicoAdicionalWebService" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="peso_sara" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="cubico_sara" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="vlr_sara" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="vlr_declarado_sara" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="cepObjSara" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="pesoObjSara" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="cubicoObjSara" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="alturaObjSara" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="larguraObjSara" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="compObjSara" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="diametroObjSara" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="tipoObjSara" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VlorDclObjSara" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VlrObjSara" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="areaDeRisco" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="DataDeImpressao" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="DataDeRetirada" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="DataDevencimento" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="DataPlp" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="dt_postagem_sara" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="Data_Postagem_sara" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="Data_Ocorrencia" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="Data_Postagem_Sro" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="DataCriacao" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="DataTratamentoSVP" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="DataDeTratamento" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="DataEnvioArDigital" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="_DadosDoRemetente" type="tns:TarifacaoCliente" />
+          <s:element minOccurs="1" maxOccurs="1" name="Continua" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="TemEtiqueta" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="descricaoConteudo" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="registroJaExistente" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="ObjetoTratado" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Objeto" type="tns:EventoObjeto" />
+          <s:element minOccurs="0" maxOccurs="1" name="Observacoes" type="tns:ArrayOfString" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="OrigemDeEntradaDosDados">
+        <s:restriction base="s:string">
+          <s:enumeration value="Bilng" />
+          <s:enumeration value="Tray" />
+          <s:enumeration value="Loja_Integrada" />
+          <s:enumeration value="Magento" />
+          <s:enumeration value="Meracdo_Livre" />
+          <s:enumeration value="Seller_Center" />
+          <s:enumeration value="Digitacao_Prepostagem" />
+          <s:enumeration value="Importacao_Prepostagem" />
+          <s:enumeration value="SmartIn" />
+          <s:enumeration value="Web_Service" />
+          <s:enumeration value="Importacao_Balanca" />
+          <s:enumeration value="Vetx" />
+          <s:enumeration value="My_shopi_fy" />
+          <s:enumeration value="Tiny" />
+          <s:enumeration value="Xtech" />
+          <s:enumeration value="KPL_Abacos" />
+          <s:enumeration value="Importacao_SmartPost" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="TarifacaoCliente">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="nome_Fantasia" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="razao_Social" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="telefone" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="usuarioSigepWeb" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="senhaSigepWeb" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="usuarioReversa" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="senhaReversa" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="usuarioWebService" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="senhaWebService" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="cnpj" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="nomeDpto" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="dadosDr" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="numeroContrato" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="codigoAdm" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="codigo_Sto" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="numeroCartaoPostagem" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="nomeChancela" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="msgErro" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="nomeDaLoja" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="keyLoja" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="urlLoja" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="tokenLoja" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="statusPedido" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="idMercadoLivre" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="securityKeyMercadoLivre" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="urlRedirectMercadoLivre" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="liberado" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="idCliente" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="idClienteExt" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="idFilial" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="idCartao" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="idContrato" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="idDepartamento" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="idDepartamentoExt" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="prazo_para_postagem" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="idCartaoAvista" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="criarCliente" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="contrato" type="tns:Contrato" />
+          <s:element minOccurs="0" maxOccurs="1" name="_dadosEndereco" type="tns:Endereco" />
+          <s:element minOccurs="1" maxOccurs="1" name="qtd_Dias" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="data_de_vencimento" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="idPacote" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="descricaoPacote" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="id_novo_pacote" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="descricaoPacote_Novo" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="cod_pacote_correios" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Contrato">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="idContrato" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="numero" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="codigo_Adm" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ano_Do_contrato" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="dados_DR" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="data_Vencimento" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="dias_vencido" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="cartoes_Postagem" type="tns:ArrayOfCartao_Postagem" />
+          <s:element minOccurs="0" maxOccurs="1" name="departamento" type="tns:Departamento" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfCartao_Postagem">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Cartao_Postagem" nillable="true" type="tns:Cartao_Postagem" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Cartao_Postagem">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="id_cartao" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="id_cliente" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="id_contrato" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="tipo" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="numero" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ativo" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Departamento">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="id_departamento" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="descricao" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Endereco">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="endereco" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="complemento" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="bairro" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="uf" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="cidade" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="referencia" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="cep" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="numero" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="AtualizaDadosAcc1Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AtualizaDadosAcc1Result" type="tns:ArrayOfRetornaDados" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AtualizarRegistro">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="numeroDeRegistro" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pesoReal" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="altura" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="largura" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="comprimento" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="senha" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AtualizarRegistroResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AtualizarRegistroResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AtualizarRegistroContingencia">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="numeroDeRegistro" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cepDestino" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pesoReal" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="altura" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="largura" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="comprimento" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="senha" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AtualizarRegistroContingenciaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AtualizarRegistroContingenciaResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BuscaDadosPLP">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="numeroDeRegistro" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="senha" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BuscaDadosPLPResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BuscaDadosPLPResult" type="tns:ArrayOfObjetoPLP" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfObjetoPLP">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ObjetoPLP" nillable="true" type="tns:ObjetoPLP" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ObjetoPLP">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="numeroPLP" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="registro" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="codServico" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="tipoObjeto" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="valor" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="cartaoPostagem" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="nomeDestinatario" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="logradouroDestinatario" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="numeroDestinatario" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="complementoDestinatario" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="bairroDestinatario" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="cidadeDestinatario" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ufDestinatario" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="cepDestinatario" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="cepRemetente" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="pesoReal" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="pesoCubico" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="valorDeclarado" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="comprovante" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="altura" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="largura" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="comprimento" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="diametro" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="adicionalAR" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="adicionalMP" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="dataPostagem" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="dataPesquisa" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="msgErro" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="RetornaObjetosPostados">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="codigosDeRegistro" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="senha" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RetornaObjetosPostadosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RetornaObjetosPostadosResult" type="tns:ArrayOfObjetoPLP" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BuscaEtiquetaPorPedido">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="numeroPedido" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="senha" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BuscaEtiquetaPorPedidoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BuscaEtiquetaPorPedidoResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BuscaEtiquetaPorNF">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="numeroNF" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="senha" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BuscaEtiquetaPorNFResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BuscaEtiquetaPorNFResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RetornaObjetosPostadosPorUsuario">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="dataInicial" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="dataFinal" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="usuarioWS" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="senhaWs" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RetornaObjetosPostadosPorUsuarioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RetornaObjetosPostadosPorUsuarioResult" type="tns:ArrayOfRetornaDados" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RetornaPostadosPorUsuario">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="numeroDosObjetos" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="usuarioWS" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="senhaWs" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RetornaPostadosPorUsuarioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RetornaPostadosPorUsuarioResult" type="tns:ArrayOfObjetosEConteudosRetorno" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfObjetosEConteudosRetorno">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ObjetosEConteudosRetorno" nillable="true" type="tns:ObjetosEConteudosRetorno" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ObjetosEConteudosRetorno">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="NumeroDoRegistro" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ConteudoDasPostagens" type="tns:ArrayOfNewPostagensConteudos" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfNewPostagensConteudos">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="NewPostagensConteudos" nillable="true" type="tns:NewPostagensConteudos" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="NewPostagensConteudos">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Conteudo" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Quantidade" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Descricao" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Valor" type="s:decimal" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="RetornaDadosPrePostagem">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="numeroRegistro" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="senha" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RetornaDadosPrePostagemResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RetornaDadosPrePostagemResult" type="tns:PrePostadoRetorno" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="PrePostadoRetorno">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Registro" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DataPrePostagem" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="DescricaoServico" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CodigoServico" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Pedido" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NotaFiscal" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Valor" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="PrazoEntrega" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Erro" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="MsgErro" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="RetornaObjetosPostadosPorFilial">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="dataInicial" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="dataFinal" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="idFilial" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RetornaObjetosPostadosPorFilialResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RetornaObjetosPostadosPorFilialResult" type="tns:ArrayOfNewCliente" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfNewCliente">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="NewCliente" nillable="true" type="tns:NewCliente" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="NewCliente">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Codigo" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Nome" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NomeFantasia" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CpfCnpj" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Logotipo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="usuarioSigepWeb" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="senhaSigepWeb" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NomeFilial" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FantasiaFilial" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="cnpjFilial" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Endereco" type="tns:NewDadosEndereco" />
+          <s:element minOccurs="0" maxOccurs="1" name="Departamento" type="tns:ArrayOfNewClienteDepartamento" />
+          <s:element minOccurs="0" maxOccurs="1" name="Eventos" type="tns:ArrayOfNewEventoObjeto" />
+          <s:element minOccurs="0" maxOccurs="1" name="Conteudos" type="tns:ArrayOfNewPostagensConteudos" />
+          <s:element minOccurs="1" maxOccurs="1" name="DataInicial" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="DataFinal" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="IdDoCliente" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="IdFilial" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="IdDepartamento" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="NewDadosEndereco">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Logradouro" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Numero" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Complemento" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Bairro" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Cidade" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Estado" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Cep" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfNewClienteDepartamento">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="NewClienteDepartamento" nillable="true" type="tns:NewClienteDepartamento" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="NewClienteDepartamento">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="idDepartamento" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="codigo" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="CodigoVisualPost" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Nome" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NomeRemetente" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Endereco" type="tns:NewDadosEndereco" />
+          <s:element minOccurs="0" maxOccurs="1" name="Postagens" type="tns:ArrayOfNewPostagens" />
+          <s:element minOccurs="0" maxOccurs="1" name="ContratoCliente" type="tns:newContratoClientes" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfNewPostagens">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="NewPostagens" nillable="true" type="tns:NewPostagens" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="NewPostagens">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="IdPostagem" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Nomedestinatario" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EnderecoDestinatario" type="tns:NewDadosEndereco" />
+          <s:element minOccurs="1" maxOccurs="1" name="altura" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="Largura" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="Comprimento" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="ValorDeclarado" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="Peso" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="Cubico" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="NumeroPedido" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NumeroNotaFiscal" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Observacao" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DescricaoServico" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CodigoServico" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="NumeroRegistro" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ValorPostagem" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="AvisoRecebimento" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="NumeroPlp" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="DiasPrazo" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="DataCriacao" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="objetoJaTratado" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="celularDoDestinatario" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="idCartaoPostagem" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="idDoDepartamento" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="maoPropria" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="postaRestante" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="avisodeRecebimentoDigital" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="objetoJaTratadoSvp" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="newContratoClientes">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="idContrato" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="descricaoChancela" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="numeroDoContrato" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="dadoDiretoriaRegional" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="codidoAdministrativo" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="anoDoContrato" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="dataDeVencimentoContrato" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="usarCnpjFilialNaEtiqueta" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="cartoesDoCliente" type="tns:newCartoesCliente" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="newCartoesCliente">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="idDoCartao" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="tipoDoCartao" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="numeroDoCartao" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfNewEventoObjeto">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="NewEventoObjeto" nillable="true" type="tns:NewEventoObjeto" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="NewEventoObjeto">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="idDados" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="idStatus" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="numero" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Tipo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Status" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DataEvento" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Descricao" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Recebedor" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Documento" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Comentario" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Local" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Codigo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Cidade" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Uf" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Sto" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="novoStatus" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="LocalDestino" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CodigoDestino" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CidadeDestino" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BairroDestino" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UFDestino" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Detalhe" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CodigoRetirar" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CepRetirar" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LogradouroRetirar" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NumeroRetirar" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CidadeRetirar" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UFRetirar" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BairroRetirar" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ValidarRegistro">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="numeroDeRegistro" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="senha" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidarRegistroResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ValidarRegistroResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="dadosTarifaRetorno" nillable="true" type="tns:dadosTarifaRetorno" />
+      <s:element name="ArrayOfDadosTarifaRetorno" nillable="true" type="tns:ArrayOfDadosTarifaRetorno" />
+      <s:element name="EnderecoMp" nillable="true" type="tns:EnderecoMp" />
+      <s:element name="ArrayOfEventoObjeto" nillable="true" type="tns:ArrayOfEventoObjeto" />
+      <s:element name="ArrayOfEventoObjetoCompleto" nillable="true" type="tns:ArrayOfEventoObjetoCompleto" />
+      <s:element name="base64Binary" nillable="true" type="s:base64Binary" />
+      <s:element name="string" nillable="true" type="s:string" />
+      <s:element name="ArrayOfObjetoPLP" nillable="true" type="tns:ArrayOfObjetoPLP" />
+      <s:element name="ArrayOfString" nillable="true" type="tns:ArrayOfString" />
+      <s:element name="ArrayOfRetornaDados" nillable="true" type="tns:ArrayOfRetornaDados" />
+      <s:element name="ArrayOfObjetosEConteudosRetorno" nillable="true" type="tns:ArrayOfObjetosEConteudosRetorno" />
+      <s:element name="PrePostadoRetorno" nillable="true" type="tns:PrePostadoRetorno" />
+      <s:element name="ArrayOfNewCliente" nillable="true" type="tns:ArrayOfNewCliente" />
+    </s:schema>
+    <s:schema targetNamespace="http://webservice.prepostagem.com.br/MpWebService.asmx/AbstractTypes">
+      <s:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+      <s:complexType name="StringArray">
+        <s:complexContent mixed="false">
+          <s:restriction base="soapenc:Array">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="unbounded" name="String" type="s:string" />
+            </s:sequence>
+          </s:restriction>
+        </s:complexContent>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="PrePostarObjetoComRegistroSoapIn">
+    <wsdl:part name="parameters" element="tns:PrePostarObjetoComRegistro" />
+  </wsdl:message>
+  <wsdl:message name="PrePostarObjetoComRegistroSoapOut">
+    <wsdl:part name="parameters" element="tns:PrePostarObjetoComRegistroResponse" />
+  </wsdl:message>
+  <wsdl:message name="PrePostarObjetoSoapIn">
+    <wsdl:part name="parameters" element="tns:PrePostarObjeto" />
+  </wsdl:message>
+  <wsdl:message name="PrePostarObjetoSoapOut">
+    <wsdl:part name="parameters" element="tns:PrePostarObjetoResponse" />
+  </wsdl:message>
+  <wsdl:message name="PrePostarObjetoV4SoapIn">
+    <wsdl:part name="parameters" element="tns:PrePostarObjetoV4" />
+  </wsdl:message>
+  <wsdl:message name="PrePostarObjetoV4SoapOut">
+    <wsdl:part name="parameters" element="tns:PrePostarObjetoV4Response" />
+  </wsdl:message>
+  <wsdl:message name="PrePostarObjetoV4_withCpfCnpjParameterSoapIn">
+    <wsdl:part name="parameters" element="tns:PrePostarObjetoV4_withCpfCnpjParameter" />
+  </wsdl:message>
+  <wsdl:message name="PrePostarObjetoV4_withCpfCnpjParameterSoapOut">
+    <wsdl:part name="parameters" element="tns:PrePostarObjetoV4_withCpfCnpjParameterResponse" />
+  </wsdl:message>
+  <wsdl:message name="PrePostarObjetoV5SoapIn">
+    <wsdl:part name="parameters" element="tns:PrePostarObjetoV5" />
+  </wsdl:message>
+  <wsdl:message name="PrePostarObjetoV5SoapOut">
+    <wsdl:part name="parameters" element="tns:PrePostarObjetoV5Response" />
+  </wsdl:message>
+  <wsdl:message name="ValidarPostagemSoapIn">
+    <wsdl:part name="parameters" element="tns:ValidarPostagem" />
+  </wsdl:message>
+  <wsdl:message name="ValidarPostagemSoapOut">
+    <wsdl:part name="parameters" element="tns:ValidarPostagemResponse" />
+  </wsdl:message>
+  <wsdl:message name="RetornaOrcamentoV2SoapIn">
+    <wsdl:part name="parameters" element="tns:RetornaOrcamentoV2" />
+  </wsdl:message>
+  <wsdl:message name="RetornaOrcamentoV2SoapOut">
+    <wsdl:part name="parameters" element="tns:RetornaOrcamentoV2Response" />
+  </wsdl:message>
+  <wsdl:message name="RetornaOrcamentoSoapIn">
+    <wsdl:part name="parameters" element="tns:RetornaOrcamento" />
+  </wsdl:message>
+  <wsdl:message name="RetornaOrcamentoSoapOut">
+    <wsdl:part name="parameters" element="tns:RetornaOrcamentoResponse" />
+  </wsdl:message>
+  <wsdl:message name="RetornaEnderecoSoapIn">
+    <wsdl:part name="parameters" element="tns:RetornaEndereco" />
+  </wsdl:message>
+  <wsdl:message name="RetornaEnderecoSoapOut">
+    <wsdl:part name="parameters" element="tns:RetornaEnderecoResponse" />
+  </wsdl:message>
+  <wsdl:message name="RetornaStatusDoObjetoSoapIn">
+    <wsdl:part name="parameters" element="tns:RetornaStatusDoObjeto" />
+  </wsdl:message>
+  <wsdl:message name="RetornaStatusDoObjetoSoapOut">
+    <wsdl:part name="parameters" element="tns:RetornaStatusDoObjetoResponse" />
+  </wsdl:message>
+  <wsdl:message name="RetornaStatusCompletoDoObjetoSoapIn">
+    <wsdl:part name="parameters" element="tns:RetornaStatusCompletoDoObjeto" />
+  </wsdl:message>
+  <wsdl:message name="RetornaStatusCompletoDoObjetoSoapOut">
+    <wsdl:part name="parameters" element="tns:RetornaStatusCompletoDoObjetoResponse" />
+  </wsdl:message>
+  <wsdl:message name="solicitarAutorizacaoDePostagemSoapIn">
+    <wsdl:part name="parameters" element="tns:solicitarAutorizacaoDePostagem" />
+  </wsdl:message>
+  <wsdl:message name="solicitarAutorizacaoDePostagemSoapOut">
+    <wsdl:part name="parameters" element="tns:solicitarAutorizacaoDePostagemResponse" />
+  </wsdl:message>
+  <wsdl:message name="PrePostarObjetoCompletoSoapIn">
+    <wsdl:part name="parameters" element="tns:PrePostarObjetoCompleto" />
+  </wsdl:message>
+  <wsdl:message name="PrePostarObjetoCompletoSoapOut">
+    <wsdl:part name="parameters" element="tns:PrePostarObjetoCompletoResponse" />
+  </wsdl:message>
+  <wsdl:message name="RetornaEtiquetasParaImpressaoSoapIn">
+    <wsdl:part name="parameters" element="tns:RetornaEtiquetasParaImpressao" />
+  </wsdl:message>
+  <wsdl:message name="RetornaEtiquetasParaImpressaoSoapOut">
+    <wsdl:part name="parameters" element="tns:RetornaEtiquetasParaImpressaoResponse" />
+  </wsdl:message>
+  <wsdl:message name="RetornaURLEtiquetasSoapIn">
+    <wsdl:part name="parameters" element="tns:RetornaURLEtiquetas" />
+  </wsdl:message>
+  <wsdl:message name="RetornaURLEtiquetasSoapOut">
+    <wsdl:part name="parameters" element="tns:RetornaURLEtiquetasResponse" />
+  </wsdl:message>
+  <wsdl:message name="AtualizaDadosAcc1SoapIn">
+    <wsdl:part name="parameters" element="tns:AtualizaDadosAcc1" />
+  </wsdl:message>
+  <wsdl:message name="AtualizaDadosAcc1SoapOut">
+    <wsdl:part name="parameters" element="tns:AtualizaDadosAcc1Response" />
+  </wsdl:message>
+  <wsdl:message name="AtualizarRegistroSoapIn">
+    <wsdl:part name="parameters" element="tns:AtualizarRegistro" />
+  </wsdl:message>
+  <wsdl:message name="AtualizarRegistroSoapOut">
+    <wsdl:part name="parameters" element="tns:AtualizarRegistroResponse" />
+  </wsdl:message>
+  <wsdl:message name="AtualizarRegistroContingenciaSoapIn">
+    <wsdl:part name="parameters" element="tns:AtualizarRegistroContingencia" />
+  </wsdl:message>
+  <wsdl:message name="AtualizarRegistroContingenciaSoapOut">
+    <wsdl:part name="parameters" element="tns:AtualizarRegistroContingenciaResponse" />
+  </wsdl:message>
+  <wsdl:message name="BuscaDadosPLPSoapIn">
+    <wsdl:part name="parameters" element="tns:BuscaDadosPLP" />
+  </wsdl:message>
+  <wsdl:message name="BuscaDadosPLPSoapOut">
+    <wsdl:part name="parameters" element="tns:BuscaDadosPLPResponse" />
+  </wsdl:message>
+  <wsdl:message name="RetornaObjetosPostadosSoapIn">
+    <wsdl:part name="parameters" element="tns:RetornaObjetosPostados" />
+  </wsdl:message>
+  <wsdl:message name="RetornaObjetosPostadosSoapOut">
+    <wsdl:part name="parameters" element="tns:RetornaObjetosPostadosResponse" />
+  </wsdl:message>
+  <wsdl:message name="BuscaEtiquetaPorPedidoSoapIn">
+    <wsdl:part name="parameters" element="tns:BuscaEtiquetaPorPedido" />
+  </wsdl:message>
+  <wsdl:message name="BuscaEtiquetaPorPedidoSoapOut">
+    <wsdl:part name="parameters" element="tns:BuscaEtiquetaPorPedidoResponse" />
+  </wsdl:message>
+  <wsdl:message name="BuscaEtiquetaPorNFSoapIn">
+    <wsdl:part name="parameters" element="tns:BuscaEtiquetaPorNF" />
+  </wsdl:message>
+  <wsdl:message name="BuscaEtiquetaPorNFSoapOut">
+    <wsdl:part name="parameters" element="tns:BuscaEtiquetaPorNFResponse" />
+  </wsdl:message>
+  <wsdl:message name="RetornaObjetosPostadosPorUsuarioSoapIn">
+    <wsdl:part name="parameters" element="tns:RetornaObjetosPostadosPorUsuario" />
+  </wsdl:message>
+  <wsdl:message name="RetornaObjetosPostadosPorUsuarioSoapOut">
+    <wsdl:part name="parameters" element="tns:RetornaObjetosPostadosPorUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="RetornaPostadosPorUsuarioSoapIn">
+    <wsdl:part name="parameters" element="tns:RetornaPostadosPorUsuario" />
+  </wsdl:message>
+  <wsdl:message name="RetornaPostadosPorUsuarioSoapOut">
+    <wsdl:part name="parameters" element="tns:RetornaPostadosPorUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="RetornaDadosPrePostagemSoapIn">
+    <wsdl:part name="parameters" element="tns:RetornaDadosPrePostagem" />
+  </wsdl:message>
+  <wsdl:message name="RetornaDadosPrePostagemSoapOut">
+    <wsdl:part name="parameters" element="tns:RetornaDadosPrePostagemResponse" />
+  </wsdl:message>
+  <wsdl:message name="RetornaObjetosPostadosPorFilialSoapIn">
+    <wsdl:part name="parameters" element="tns:RetornaObjetosPostadosPorFilial" />
+  </wsdl:message>
+  <wsdl:message name="RetornaObjetosPostadosPorFilialSoapOut">
+    <wsdl:part name="parameters" element="tns:RetornaObjetosPostadosPorFilialResponse" />
+  </wsdl:message>
+  <wsdl:message name="ValidarRegistroSoapIn">
+    <wsdl:part name="parameters" element="tns:ValidarRegistro" />
+  </wsdl:message>
+  <wsdl:message name="ValidarRegistroSoapOut">
+    <wsdl:part name="parameters" element="tns:ValidarRegistroResponse" />
+  </wsdl:message>
+  <wsdl:message name="PrePostarObjetoComRegistroHttpGetIn">
+    <wsdl:part name="cnpj" type="s:string" />
+    <wsdl:part name="numeroCartao" type="s:string" />
+    <wsdl:part name="nomeDestinatario" type="s:string" />
+    <wsdl:part name="enderecoDestinatario" type="s:string" />
+    <wsdl:part name="numeroDestinatario" type="s:string" />
+    <wsdl:part name="complementoDestinatario" type="s:string" />
+    <wsdl:part name="bairroDestinatario" type="s:string" />
+    <wsdl:part name="ufDestinatario" type="s:string" />
+    <wsdl:part name="cidadeDestinatario" type="s:string" />
+    <wsdl:part name="cepDestinatario" type="s:string" />
+    <wsdl:part name="notaFiscal" type="s:string" />
+    <wsdl:part name="Pedido" type="s:string" />
+    <wsdl:part name="codigoDoServico" type="s:string" />
+    <wsdl:part name="pesoReal" type="s:string" />
+    <wsdl:part name="valorDeclarado" type="s:string" />
+    <wsdl:part name="altura" type="s:string" />
+    <wsdl:part name="largura" type="s:string" />
+    <wsdl:part name="comprimento" type="s:string" />
+    <wsdl:part name="avisoDeRecebimento" type="s:string" />
+    <wsdl:part name="numeroDeRegistro" type="s:string" />
+    <wsdl:part name="email" type="s:string" />
+    <wsdl:part name="conteudos" type="s:string" />
+    <wsdl:part name="celularDestinatario" type="s:string" />
+    <wsdl:part name="usuario" type="s:string" />
+    <wsdl:part name="senha" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="PrePostarObjetoComRegistroHttpGetOut">
+    <wsdl:part name="Body" element="tns:dadosTarifaRetorno" />
+  </wsdl:message>
+  <wsdl:message name="PrePostarObjetoHttpGetIn">
+    <wsdl:part name="cnpj" type="s:string" />
+    <wsdl:part name="numeroCartao" type="s:string" />
+    <wsdl:part name="nomeDestinatario" type="s:string" />
+    <wsdl:part name="enderecoDestinatario" type="s:string" />
+    <wsdl:part name="numeroDestinatario" type="s:string" />
+    <wsdl:part name="complementoDestinatario" type="s:string" />
+    <wsdl:part name="bairroDestinatario" type="s:string" />
+    <wsdl:part name="ufDestinatario" type="s:string" />
+    <wsdl:part name="cidadeDestinatario" type="s:string" />
+    <wsdl:part name="cepDestinatario" type="s:string" />
+    <wsdl:part name="notaFiscal" type="s:string" />
+    <wsdl:part name="Pedido" type="s:string" />
+    <wsdl:part name="codigoDoServico" type="s:string" />
+    <wsdl:part name="pesoReal" type="s:string" />
+    <wsdl:part name="valorDeclarado" type="s:string" />
+    <wsdl:part name="altura" type="s:string" />
+    <wsdl:part name="largura" type="s:string" />
+    <wsdl:part name="comprimento" type="s:string" />
+    <wsdl:part name="avisoDeRecebimento" type="s:string" />
+    <wsdl:part name="numeroDeRegistro" type="s:string" />
+    <wsdl:part name="email" type="s:string" />
+    <wsdl:part name="conteudos" type="s:string" />
+    <wsdl:part name="celularDestinatario" type="s:string" />
+    <wsdl:part name="usuario" type="s:string" />
+    <wsdl:part name="senha" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="PrePostarObjetoHttpGetOut">
+    <wsdl:part name="Body" element="tns:dadosTarifaRetorno" />
+  </wsdl:message>
+  <wsdl:message name="RetornaOrcamentoV2HttpGetIn">
+    <wsdl:part name="cnpj" type="s:string" />
+    <wsdl:part name="numeroCartao" type="s:string" />
+    <wsdl:part name="cepDestino" type="s:string" />
+    <wsdl:part name="pesoReal" type="s:string" />
+    <wsdl:part name="valorDeclarado" type="s:string" />
+    <wsdl:part name="altura" type="s:string" />
+    <wsdl:part name="largura" type="s:string" />
+    <wsdl:part name="comprimento" type="s:string" />
+    <wsdl:part name="avisoDeRecebimento" type="s:string" />
+    <wsdl:part name="usuario" type="s:string" />
+    <wsdl:part name="senha" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="RetornaOrcamentoV2HttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfDadosTarifaRetorno" />
+  </wsdl:message>
+  <wsdl:message name="RetornaOrcamentoHttpGetIn">
+    <wsdl:part name="cnpj" type="s:string" />
+    <wsdl:part name="numeroCartao" type="s:string" />
+    <wsdl:part name="cepDestino" type="s:string" />
+    <wsdl:part name="pesoReal" type="s:string" />
+    <wsdl:part name="valorDeclarado" type="s:string" />
+    <wsdl:part name="altura" type="s:string" />
+    <wsdl:part name="largura" type="s:string" />
+    <wsdl:part name="comprimento" type="s:string" />
+    <wsdl:part name="avisoDeRecebimento" type="s:string" />
+    <wsdl:part name="usuario" type="s:string" />
+    <wsdl:part name="senha" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="RetornaOrcamentoHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfDadosTarifaRetorno" />
+  </wsdl:message>
+  <wsdl:message name="RetornaEnderecoHttpGetIn">
+    <wsdl:part name="cep" type="s:string" />
+    <wsdl:part name="usuario" type="s:string" />
+    <wsdl:part name="senha" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="RetornaEnderecoHttpGetOut">
+    <wsdl:part name="Body" element="tns:EnderecoMp" />
+  </wsdl:message>
+  <wsdl:message name="RetornaStatusDoObjetoHttpGetIn">
+    <wsdl:part name="cnpj" type="s:string" />
+    <wsdl:part name="numeroCartao" type="s:string" />
+    <wsdl:part name="numeroRegistro" type="s:string" />
+    <wsdl:part name="usuario" type="s:string" />
+    <wsdl:part name="senha" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="RetornaStatusDoObjetoHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfEventoObjeto" />
+  </wsdl:message>
+  <wsdl:message name="RetornaStatusCompletoDoObjetoHttpGetIn">
+    <wsdl:part name="cnpj" type="s:string" />
+    <wsdl:part name="numeroCartao" type="s:string" />
+    <wsdl:part name="numeroRegistro" type="s:string" />
+    <wsdl:part name="usuario" type="s:string" />
+    <wsdl:part name="senha" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="RetornaStatusCompletoDoObjetoHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfEventoObjetoCompleto" />
+  </wsdl:message>
+  <wsdl:message name="solicitarAutorizacaoDePostagemHttpGetIn">
+    <wsdl:part name="cnpj" type="s:string" />
+    <wsdl:part name="numeroCartao" type="s:string" />
+    <wsdl:part name="nomeDestinatario" type="s:string" />
+    <wsdl:part name="enderecoDestinatario" type="s:string" />
+    <wsdl:part name="numeroDestinatario" type="s:string" />
+    <wsdl:part name="complementoDestinatario" type="s:string" />
+    <wsdl:part name="bairroDestinatario" type="s:string" />
+    <wsdl:part name="ufDestinatario" type="s:string" />
+    <wsdl:part name="cidadeDestinatario" type="s:string" />
+    <wsdl:part name="cepRemetente" type="s:string" />
+    <wsdl:part name="cepDestinatario" type="s:string" />
+    <wsdl:part name="notaFiscal" type="s:string" />
+    <wsdl:part name="Pedido" type="s:string" />
+    <wsdl:part name="codigoDoServico" type="s:string" />
+    <wsdl:part name="valorDeclarado" type="s:string" />
+    <wsdl:part name="avisoDeRecebimento" type="s:string" />
+    <wsdl:part name="email" type="s:string" />
+    <wsdl:part name="celularDestinatario" type="s:string" />
+    <wsdl:part name="usuario" type="s:string" />
+    <wsdl:part name="senha" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="solicitarAutorizacaoDePostagemHttpGetOut">
+    <wsdl:part name="Body" element="tns:dadosTarifaRetorno" />
+  </wsdl:message>
+  <wsdl:message name="RetornaEtiquetasParaImpressaoHttpGetIn">
+    <wsdl:part name="cnpj" type="s:string" />
+    <wsdl:part name="numeroCartao" type="s:string" />
+    <wsdl:part name="registros" type="s1:StringArray" />
+    <wsdl:part name="impressoraZebra" type="s:string" />
+    <wsdl:part name="usuario" type="s:string" />
+    <wsdl:part name="senha" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="RetornaEtiquetasParaImpressaoHttpGetOut">
+    <wsdl:part name="Body" element="tns:base64Binary" />
+  </wsdl:message>
+  <wsdl:message name="RetornaURLEtiquetasHttpGetIn">
+    <wsdl:part name="cnpj" type="s:string" />
+    <wsdl:part name="numeroCartao" type="s:string" />
+    <wsdl:part name="registros" type="s1:StringArray" />
+    <wsdl:part name="impressoraZebra" type="s:string" />
+    <wsdl:part name="usuario" type="s:string" />
+    <wsdl:part name="senha" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="RetornaURLEtiquetasHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="AtualizarRegistroHttpGetIn">
+    <wsdl:part name="numeroDeRegistro" type="s:string" />
+    <wsdl:part name="pesoReal" type="s:string" />
+    <wsdl:part name="altura" type="s:string" />
+    <wsdl:part name="largura" type="s:string" />
+    <wsdl:part name="comprimento" type="s:string" />
+    <wsdl:part name="usuario" type="s:string" />
+    <wsdl:part name="senha" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AtualizarRegistroHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="AtualizarRegistroContingenciaHttpGetIn">
+    <wsdl:part name="numeroDeRegistro" type="s:string" />
+    <wsdl:part name="cepDestino" type="s:string" />
+    <wsdl:part name="pesoReal" type="s:string" />
+    <wsdl:part name="altura" type="s:string" />
+    <wsdl:part name="largura" type="s:string" />
+    <wsdl:part name="comprimento" type="s:string" />
+    <wsdl:part name="usuario" type="s:string" />
+    <wsdl:part name="senha" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AtualizarRegistroContingenciaHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="BuscaDadosPLPHttpGetIn">
+    <wsdl:part name="numeroDeRegistro" type="s:string" />
+    <wsdl:part name="usuario" type="s:string" />
+    <wsdl:part name="senha" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="BuscaDadosPLPHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfObjetoPLP" />
+  </wsdl:message>
+  <wsdl:message name="RetornaObjetosPostadosHttpGetIn">
+    <wsdl:part name="codigosDeRegistro" type="s:string" />
+    <wsdl:part name="usuario" type="s:string" />
+    <wsdl:part name="senha" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="RetornaObjetosPostadosHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfObjetoPLP" />
+  </wsdl:message>
+  <wsdl:message name="BuscaEtiquetaPorPedidoHttpGetIn">
+    <wsdl:part name="numeroPedido" type="s:string" />
+    <wsdl:part name="usuario" type="s:string" />
+    <wsdl:part name="senha" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="BuscaEtiquetaPorPedidoHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfString" />
+  </wsdl:message>
+  <wsdl:message name="BuscaEtiquetaPorNFHttpGetIn">
+    <wsdl:part name="numeroNF" type="s:string" />
+    <wsdl:part name="usuario" type="s:string" />
+    <wsdl:part name="senha" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="BuscaEtiquetaPorNFHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfString" />
+  </wsdl:message>
+  <wsdl:message name="RetornaObjetosPostadosPorUsuarioHttpGetIn">
+    <wsdl:part name="dataInicial" type="s:string" />
+    <wsdl:part name="dataFinal" type="s:string" />
+    <wsdl:part name="usuarioWS" type="s:string" />
+    <wsdl:part name="senhaWs" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="RetornaObjetosPostadosPorUsuarioHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfRetornaDados" />
+  </wsdl:message>
+  <wsdl:message name="RetornaPostadosPorUsuarioHttpGetIn">
+    <wsdl:part name="numeroDosObjetos" type="s1:StringArray" />
+    <wsdl:part name="usuarioWS" type="s:string" />
+    <wsdl:part name="senhaWs" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="RetornaPostadosPorUsuarioHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfObjetosEConteudosRetorno" />
+  </wsdl:message>
+  <wsdl:message name="RetornaDadosPrePostagemHttpGetIn">
+    <wsdl:part name="numeroRegistro" type="s:string" />
+    <wsdl:part name="usuario" type="s:string" />
+    <wsdl:part name="senha" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="RetornaDadosPrePostagemHttpGetOut">
+    <wsdl:part name="Body" element="tns:PrePostadoRetorno" />
+  </wsdl:message>
+  <wsdl:message name="RetornaObjetosPostadosPorFilialHttpGetIn">
+    <wsdl:part name="dataInicial" type="s:string" />
+    <wsdl:part name="dataFinal" type="s:string" />
+    <wsdl:part name="idFilial" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="RetornaObjetosPostadosPorFilialHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfNewCliente" />
+  </wsdl:message>
+  <wsdl:message name="ValidarRegistroHttpGetIn">
+    <wsdl:part name="numeroDeRegistro" type="s:string" />
+    <wsdl:part name="usuario" type="s:string" />
+    <wsdl:part name="senha" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ValidarRegistroHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="PrePostarObjetoComRegistroHttpPostIn">
+    <wsdl:part name="cnpj" type="s:string" />
+    <wsdl:part name="numeroCartao" type="s:string" />
+    <wsdl:part name="nomeDestinatario" type="s:string" />
+    <wsdl:part name="enderecoDestinatario" type="s:string" />
+    <wsdl:part name="numeroDestinatario" type="s:string" />
+    <wsdl:part name="complementoDestinatario" type="s:string" />
+    <wsdl:part name="bairroDestinatario" type="s:string" />
+    <wsdl:part name="ufDestinatario" type="s:string" />
+    <wsdl:part name="cidadeDestinatario" type="s:string" />
+    <wsdl:part name="cepDestinatario" type="s:string" />
+    <wsdl:part name="notaFiscal" type="s:string" />
+    <wsdl:part name="Pedido" type="s:string" />
+    <wsdl:part name="codigoDoServico" type="s:string" />
+    <wsdl:part name="pesoReal" type="s:string" />
+    <wsdl:part name="valorDeclarado" type="s:string" />
+    <wsdl:part name="altura" type="s:string" />
+    <wsdl:part name="largura" type="s:string" />
+    <wsdl:part name="comprimento" type="s:string" />
+    <wsdl:part name="avisoDeRecebimento" type="s:string" />
+    <wsdl:part name="numeroDeRegistro" type="s:string" />
+    <wsdl:part name="email" type="s:string" />
+    <wsdl:part name="conteudos" type="s:string" />
+    <wsdl:part name="celularDestinatario" type="s:string" />
+    <wsdl:part name="usuario" type="s:string" />
+    <wsdl:part name="senha" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="PrePostarObjetoComRegistroHttpPostOut">
+    <wsdl:part name="Body" element="tns:dadosTarifaRetorno" />
+  </wsdl:message>
+  <wsdl:message name="PrePostarObjetoHttpPostIn">
+    <wsdl:part name="cnpj" type="s:string" />
+    <wsdl:part name="numeroCartao" type="s:string" />
+    <wsdl:part name="nomeDestinatario" type="s:string" />
+    <wsdl:part name="enderecoDestinatario" type="s:string" />
+    <wsdl:part name="numeroDestinatario" type="s:string" />
+    <wsdl:part name="complementoDestinatario" type="s:string" />
+    <wsdl:part name="bairroDestinatario" type="s:string" />
+    <wsdl:part name="ufDestinatario" type="s:string" />
+    <wsdl:part name="cidadeDestinatario" type="s:string" />
+    <wsdl:part name="cepDestinatario" type="s:string" />
+    <wsdl:part name="notaFiscal" type="s:string" />
+    <wsdl:part name="Pedido" type="s:string" />
+    <wsdl:part name="codigoDoServico" type="s:string" />
+    <wsdl:part name="pesoReal" type="s:string" />
+    <wsdl:part name="valorDeclarado" type="s:string" />
+    <wsdl:part name="altura" type="s:string" />
+    <wsdl:part name="largura" type="s:string" />
+    <wsdl:part name="comprimento" type="s:string" />
+    <wsdl:part name="avisoDeRecebimento" type="s:string" />
+    <wsdl:part name="numeroDeRegistro" type="s:string" />
+    <wsdl:part name="email" type="s:string" />
+    <wsdl:part name="conteudos" type="s:string" />
+    <wsdl:part name="celularDestinatario" type="s:string" />
+    <wsdl:part name="usuario" type="s:string" />
+    <wsdl:part name="senha" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="PrePostarObjetoHttpPostOut">
+    <wsdl:part name="Body" element="tns:dadosTarifaRetorno" />
+  </wsdl:message>
+  <wsdl:message name="RetornaOrcamentoV2HttpPostIn">
+    <wsdl:part name="cnpj" type="s:string" />
+    <wsdl:part name="numeroCartao" type="s:string" />
+    <wsdl:part name="cepDestino" type="s:string" />
+    <wsdl:part name="pesoReal" type="s:string" />
+    <wsdl:part name="valorDeclarado" type="s:string" />
+    <wsdl:part name="altura" type="s:string" />
+    <wsdl:part name="largura" type="s:string" />
+    <wsdl:part name="comprimento" type="s:string" />
+    <wsdl:part name="avisoDeRecebimento" type="s:string" />
+    <wsdl:part name="usuario" type="s:string" />
+    <wsdl:part name="senha" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="RetornaOrcamentoV2HttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfDadosTarifaRetorno" />
+  </wsdl:message>
+  <wsdl:message name="RetornaOrcamentoHttpPostIn">
+    <wsdl:part name="cnpj" type="s:string" />
+    <wsdl:part name="numeroCartao" type="s:string" />
+    <wsdl:part name="cepDestino" type="s:string" />
+    <wsdl:part name="pesoReal" type="s:string" />
+    <wsdl:part name="valorDeclarado" type="s:string" />
+    <wsdl:part name="altura" type="s:string" />
+    <wsdl:part name="largura" type="s:string" />
+    <wsdl:part name="comprimento" type="s:string" />
+    <wsdl:part name="avisoDeRecebimento" type="s:string" />
+    <wsdl:part name="usuario" type="s:string" />
+    <wsdl:part name="senha" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="RetornaOrcamentoHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfDadosTarifaRetorno" />
+  </wsdl:message>
+  <wsdl:message name="RetornaEnderecoHttpPostIn">
+    <wsdl:part name="cep" type="s:string" />
+    <wsdl:part name="usuario" type="s:string" />
+    <wsdl:part name="senha" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="RetornaEnderecoHttpPostOut">
+    <wsdl:part name="Body" element="tns:EnderecoMp" />
+  </wsdl:message>
+  <wsdl:message name="RetornaStatusDoObjetoHttpPostIn">
+    <wsdl:part name="cnpj" type="s:string" />
+    <wsdl:part name="numeroCartao" type="s:string" />
+    <wsdl:part name="numeroRegistro" type="s:string" />
+    <wsdl:part name="usuario" type="s:string" />
+    <wsdl:part name="senha" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="RetornaStatusDoObjetoHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfEventoObjeto" />
+  </wsdl:message>
+  <wsdl:message name="RetornaStatusCompletoDoObjetoHttpPostIn">
+    <wsdl:part name="cnpj" type="s:string" />
+    <wsdl:part name="numeroCartao" type="s:string" />
+    <wsdl:part name="numeroRegistro" type="s:string" />
+    <wsdl:part name="usuario" type="s:string" />
+    <wsdl:part name="senha" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="RetornaStatusCompletoDoObjetoHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfEventoObjetoCompleto" />
+  </wsdl:message>
+  <wsdl:message name="solicitarAutorizacaoDePostagemHttpPostIn">
+    <wsdl:part name="cnpj" type="s:string" />
+    <wsdl:part name="numeroCartao" type="s:string" />
+    <wsdl:part name="nomeDestinatario" type="s:string" />
+    <wsdl:part name="enderecoDestinatario" type="s:string" />
+    <wsdl:part name="numeroDestinatario" type="s:string" />
+    <wsdl:part name="complementoDestinatario" type="s:string" />
+    <wsdl:part name="bairroDestinatario" type="s:string" />
+    <wsdl:part name="ufDestinatario" type="s:string" />
+    <wsdl:part name="cidadeDestinatario" type="s:string" />
+    <wsdl:part name="cepRemetente" type="s:string" />
+    <wsdl:part name="cepDestinatario" type="s:string" />
+    <wsdl:part name="notaFiscal" type="s:string" />
+    <wsdl:part name="Pedido" type="s:string" />
+    <wsdl:part name="codigoDoServico" type="s:string" />
+    <wsdl:part name="valorDeclarado" type="s:string" />
+    <wsdl:part name="avisoDeRecebimento" type="s:string" />
+    <wsdl:part name="email" type="s:string" />
+    <wsdl:part name="celularDestinatario" type="s:string" />
+    <wsdl:part name="usuario" type="s:string" />
+    <wsdl:part name="senha" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="solicitarAutorizacaoDePostagemHttpPostOut">
+    <wsdl:part name="Body" element="tns:dadosTarifaRetorno" />
+  </wsdl:message>
+  <wsdl:message name="RetornaEtiquetasParaImpressaoHttpPostIn">
+    <wsdl:part name="cnpj" type="s:string" />
+    <wsdl:part name="numeroCartao" type="s:string" />
+    <wsdl:part name="registros" type="s1:StringArray" />
+    <wsdl:part name="impressoraZebra" type="s:string" />
+    <wsdl:part name="usuario" type="s:string" />
+    <wsdl:part name="senha" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="RetornaEtiquetasParaImpressaoHttpPostOut">
+    <wsdl:part name="Body" element="tns:base64Binary" />
+  </wsdl:message>
+  <wsdl:message name="RetornaURLEtiquetasHttpPostIn">
+    <wsdl:part name="cnpj" type="s:string" />
+    <wsdl:part name="numeroCartao" type="s:string" />
+    <wsdl:part name="registros" type="s1:StringArray" />
+    <wsdl:part name="impressoraZebra" type="s:string" />
+    <wsdl:part name="usuario" type="s:string" />
+    <wsdl:part name="senha" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="RetornaURLEtiquetasHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="AtualizarRegistroHttpPostIn">
+    <wsdl:part name="numeroDeRegistro" type="s:string" />
+    <wsdl:part name="pesoReal" type="s:string" />
+    <wsdl:part name="altura" type="s:string" />
+    <wsdl:part name="largura" type="s:string" />
+    <wsdl:part name="comprimento" type="s:string" />
+    <wsdl:part name="usuario" type="s:string" />
+    <wsdl:part name="senha" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AtualizarRegistroHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="AtualizarRegistroContingenciaHttpPostIn">
+    <wsdl:part name="numeroDeRegistro" type="s:string" />
+    <wsdl:part name="cepDestino" type="s:string" />
+    <wsdl:part name="pesoReal" type="s:string" />
+    <wsdl:part name="altura" type="s:string" />
+    <wsdl:part name="largura" type="s:string" />
+    <wsdl:part name="comprimento" type="s:string" />
+    <wsdl:part name="usuario" type="s:string" />
+    <wsdl:part name="senha" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AtualizarRegistroContingenciaHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="BuscaDadosPLPHttpPostIn">
+    <wsdl:part name="numeroDeRegistro" type="s:string" />
+    <wsdl:part name="usuario" type="s:string" />
+    <wsdl:part name="senha" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="BuscaDadosPLPHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfObjetoPLP" />
+  </wsdl:message>
+  <wsdl:message name="RetornaObjetosPostadosHttpPostIn">
+    <wsdl:part name="codigosDeRegistro" type="s:string" />
+    <wsdl:part name="usuario" type="s:string" />
+    <wsdl:part name="senha" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="RetornaObjetosPostadosHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfObjetoPLP" />
+  </wsdl:message>
+  <wsdl:message name="BuscaEtiquetaPorPedidoHttpPostIn">
+    <wsdl:part name="numeroPedido" type="s:string" />
+    <wsdl:part name="usuario" type="s:string" />
+    <wsdl:part name="senha" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="BuscaEtiquetaPorPedidoHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfString" />
+  </wsdl:message>
+  <wsdl:message name="BuscaEtiquetaPorNFHttpPostIn">
+    <wsdl:part name="numeroNF" type="s:string" />
+    <wsdl:part name="usuario" type="s:string" />
+    <wsdl:part name="senha" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="BuscaEtiquetaPorNFHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfString" />
+  </wsdl:message>
+  <wsdl:message name="RetornaObjetosPostadosPorUsuarioHttpPostIn">
+    <wsdl:part name="dataInicial" type="s:string" />
+    <wsdl:part name="dataFinal" type="s:string" />
+    <wsdl:part name="usuarioWS" type="s:string" />
+    <wsdl:part name="senhaWs" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="RetornaObjetosPostadosPorUsuarioHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfRetornaDados" />
+  </wsdl:message>
+  <wsdl:message name="RetornaPostadosPorUsuarioHttpPostIn">
+    <wsdl:part name="numeroDosObjetos" type="s1:StringArray" />
+    <wsdl:part name="usuarioWS" type="s:string" />
+    <wsdl:part name="senhaWs" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="RetornaPostadosPorUsuarioHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfObjetosEConteudosRetorno" />
+  </wsdl:message>
+  <wsdl:message name="RetornaDadosPrePostagemHttpPostIn">
+    <wsdl:part name="numeroRegistro" type="s:string" />
+    <wsdl:part name="usuario" type="s:string" />
+    <wsdl:part name="senha" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="RetornaDadosPrePostagemHttpPostOut">
+    <wsdl:part name="Body" element="tns:PrePostadoRetorno" />
+  </wsdl:message>
+  <wsdl:message name="RetornaObjetosPostadosPorFilialHttpPostIn">
+    <wsdl:part name="dataInicial" type="s:string" />
+    <wsdl:part name="dataFinal" type="s:string" />
+    <wsdl:part name="idFilial" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="RetornaObjetosPostadosPorFilialHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfNewCliente" />
+  </wsdl:message>
+  <wsdl:message name="ValidarRegistroHttpPostIn">
+    <wsdl:part name="numeroDeRegistro" type="s:string" />
+    <wsdl:part name="usuario" type="s:string" />
+    <wsdl:part name="senha" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ValidarRegistroHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:portType name="Service1Soap">
+    <wsdl:operation name="PrePostarObjetoComRegistro">
+      <wsdl:input message="tns:PrePostarObjetoComRegistroSoapIn" />
+      <wsdl:output message="tns:PrePostarObjetoComRegistroSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PrePostarObjeto">
+      <wsdl:input message="tns:PrePostarObjetoSoapIn" />
+      <wsdl:output message="tns:PrePostarObjetoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PrePostarObjetoV4">
+      <wsdl:input message="tns:PrePostarObjetoV4SoapIn" />
+      <wsdl:output message="tns:PrePostarObjetoV4SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PrePostarObjetoV4">
+      <wsdl:input name="PrePostarObjetoV4_withCpfCnpjParameter" message="tns:PrePostarObjetoV4_withCpfCnpjParameterSoapIn" />
+      <wsdl:output name="PrePostarObjetoV4_withCpfCnpjParameter" message="tns:PrePostarObjetoV4_withCpfCnpjParameterSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PrePostarObjetoV5">
+      <wsdl:input message="tns:PrePostarObjetoV5SoapIn" />
+      <wsdl:output message="tns:PrePostarObjetoV5SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidarPostagem">
+      <wsdl:input message="tns:ValidarPostagemSoapIn" />
+      <wsdl:output message="tns:ValidarPostagemSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RetornaOrcamentoV2">
+      <wsdl:input message="tns:RetornaOrcamentoV2SoapIn" />
+      <wsdl:output message="tns:RetornaOrcamentoV2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RetornaOrcamento">
+      <wsdl:input message="tns:RetornaOrcamentoSoapIn" />
+      <wsdl:output message="tns:RetornaOrcamentoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RetornaEndereco">
+      <wsdl:input message="tns:RetornaEnderecoSoapIn" />
+      <wsdl:output message="tns:RetornaEnderecoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RetornaStatusDoObjeto">
+      <wsdl:input message="tns:RetornaStatusDoObjetoSoapIn" />
+      <wsdl:output message="tns:RetornaStatusDoObjetoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RetornaStatusCompletoDoObjeto">
+      <wsdl:input message="tns:RetornaStatusCompletoDoObjetoSoapIn" />
+      <wsdl:output message="tns:RetornaStatusCompletoDoObjetoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="solicitarAutorizacaoDePostagem">
+      <wsdl:input message="tns:solicitarAutorizacaoDePostagemSoapIn" />
+      <wsdl:output message="tns:solicitarAutorizacaoDePostagemSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PrePostarObjetoCompleto">
+      <wsdl:input message="tns:PrePostarObjetoCompletoSoapIn" />
+      <wsdl:output message="tns:PrePostarObjetoCompletoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RetornaEtiquetasParaImpressao">
+      <wsdl:input message="tns:RetornaEtiquetasParaImpressaoSoapIn" />
+      <wsdl:output message="tns:RetornaEtiquetasParaImpressaoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RetornaURLEtiquetas">
+      <wsdl:input message="tns:RetornaURLEtiquetasSoapIn" />
+      <wsdl:output message="tns:RetornaURLEtiquetasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AtualizaDadosAcc1">
+      <wsdl:input message="tns:AtualizaDadosAcc1SoapIn" />
+      <wsdl:output message="tns:AtualizaDadosAcc1SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AtualizarRegistro">
+      <wsdl:input message="tns:AtualizarRegistroSoapIn" />
+      <wsdl:output message="tns:AtualizarRegistroSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AtualizarRegistroContingencia">
+      <wsdl:input message="tns:AtualizarRegistroContingenciaSoapIn" />
+      <wsdl:output message="tns:AtualizarRegistroContingenciaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BuscaDadosPLP">
+      <wsdl:input message="tns:BuscaDadosPLPSoapIn" />
+      <wsdl:output message="tns:BuscaDadosPLPSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RetornaObjetosPostados">
+      <wsdl:input message="tns:RetornaObjetosPostadosSoapIn" />
+      <wsdl:output message="tns:RetornaObjetosPostadosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BuscaEtiquetaPorPedido">
+      <wsdl:input message="tns:BuscaEtiquetaPorPedidoSoapIn" />
+      <wsdl:output message="tns:BuscaEtiquetaPorPedidoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BuscaEtiquetaPorNF">
+      <wsdl:input message="tns:BuscaEtiquetaPorNFSoapIn" />
+      <wsdl:output message="tns:BuscaEtiquetaPorNFSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RetornaObjetosPostadosPorUsuario">
+      <wsdl:input message="tns:RetornaObjetosPostadosPorUsuarioSoapIn" />
+      <wsdl:output message="tns:RetornaObjetosPostadosPorUsuarioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RetornaPostadosPorUsuario">
+      <wsdl:input message="tns:RetornaPostadosPorUsuarioSoapIn" />
+      <wsdl:output message="tns:RetornaPostadosPorUsuarioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RetornaDadosPrePostagem">
+      <wsdl:input message="tns:RetornaDadosPrePostagemSoapIn" />
+      <wsdl:output message="tns:RetornaDadosPrePostagemSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RetornaObjetosPostadosPorFilial">
+      <wsdl:input message="tns:RetornaObjetosPostadosPorFilialSoapIn" />
+      <wsdl:output message="tns:RetornaObjetosPostadosPorFilialSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidarRegistro">
+      <wsdl:input message="tns:ValidarRegistroSoapIn" />
+      <wsdl:output message="tns:ValidarRegistroSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="Service1HttpGet">
+    <wsdl:operation name="PrePostarObjetoComRegistro">
+      <wsdl:input message="tns:PrePostarObjetoComRegistroHttpGetIn" />
+      <wsdl:output message="tns:PrePostarObjetoComRegistroHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PrePostarObjeto">
+      <wsdl:input message="tns:PrePostarObjetoHttpGetIn" />
+      <wsdl:output message="tns:PrePostarObjetoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RetornaOrcamentoV2">
+      <wsdl:input message="tns:RetornaOrcamentoV2HttpGetIn" />
+      <wsdl:output message="tns:RetornaOrcamentoV2HttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RetornaOrcamento">
+      <wsdl:input message="tns:RetornaOrcamentoHttpGetIn" />
+      <wsdl:output message="tns:RetornaOrcamentoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RetornaEndereco">
+      <wsdl:input message="tns:RetornaEnderecoHttpGetIn" />
+      <wsdl:output message="tns:RetornaEnderecoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RetornaStatusDoObjeto">
+      <wsdl:input message="tns:RetornaStatusDoObjetoHttpGetIn" />
+      <wsdl:output message="tns:RetornaStatusDoObjetoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RetornaStatusCompletoDoObjeto">
+      <wsdl:input message="tns:RetornaStatusCompletoDoObjetoHttpGetIn" />
+      <wsdl:output message="tns:RetornaStatusCompletoDoObjetoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="solicitarAutorizacaoDePostagem">
+      <wsdl:input message="tns:solicitarAutorizacaoDePostagemHttpGetIn" />
+      <wsdl:output message="tns:solicitarAutorizacaoDePostagemHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RetornaEtiquetasParaImpressao">
+      <wsdl:input message="tns:RetornaEtiquetasParaImpressaoHttpGetIn" />
+      <wsdl:output message="tns:RetornaEtiquetasParaImpressaoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RetornaURLEtiquetas">
+      <wsdl:input message="tns:RetornaURLEtiquetasHttpGetIn" />
+      <wsdl:output message="tns:RetornaURLEtiquetasHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AtualizarRegistro">
+      <wsdl:input message="tns:AtualizarRegistroHttpGetIn" />
+      <wsdl:output message="tns:AtualizarRegistroHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AtualizarRegistroContingencia">
+      <wsdl:input message="tns:AtualizarRegistroContingenciaHttpGetIn" />
+      <wsdl:output message="tns:AtualizarRegistroContingenciaHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BuscaDadosPLP">
+      <wsdl:input message="tns:BuscaDadosPLPHttpGetIn" />
+      <wsdl:output message="tns:BuscaDadosPLPHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RetornaObjetosPostados">
+      <wsdl:input message="tns:RetornaObjetosPostadosHttpGetIn" />
+      <wsdl:output message="tns:RetornaObjetosPostadosHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BuscaEtiquetaPorPedido">
+      <wsdl:input message="tns:BuscaEtiquetaPorPedidoHttpGetIn" />
+      <wsdl:output message="tns:BuscaEtiquetaPorPedidoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BuscaEtiquetaPorNF">
+      <wsdl:input message="tns:BuscaEtiquetaPorNFHttpGetIn" />
+      <wsdl:output message="tns:BuscaEtiquetaPorNFHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RetornaObjetosPostadosPorUsuario">
+      <wsdl:input message="tns:RetornaObjetosPostadosPorUsuarioHttpGetIn" />
+      <wsdl:output message="tns:RetornaObjetosPostadosPorUsuarioHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RetornaPostadosPorUsuario">
+      <wsdl:input message="tns:RetornaPostadosPorUsuarioHttpGetIn" />
+      <wsdl:output message="tns:RetornaPostadosPorUsuarioHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RetornaDadosPrePostagem">
+      <wsdl:input message="tns:RetornaDadosPrePostagemHttpGetIn" />
+      <wsdl:output message="tns:RetornaDadosPrePostagemHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RetornaObjetosPostadosPorFilial">
+      <wsdl:input message="tns:RetornaObjetosPostadosPorFilialHttpGetIn" />
+      <wsdl:output message="tns:RetornaObjetosPostadosPorFilialHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidarRegistro">
+      <wsdl:input message="tns:ValidarRegistroHttpGetIn" />
+      <wsdl:output message="tns:ValidarRegistroHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="Service1HttpPost">
+    <wsdl:operation name="PrePostarObjetoComRegistro">
+      <wsdl:input message="tns:PrePostarObjetoComRegistroHttpPostIn" />
+      <wsdl:output message="tns:PrePostarObjetoComRegistroHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PrePostarObjeto">
+      <wsdl:input message="tns:PrePostarObjetoHttpPostIn" />
+      <wsdl:output message="tns:PrePostarObjetoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RetornaOrcamentoV2">
+      <wsdl:input message="tns:RetornaOrcamentoV2HttpPostIn" />
+      <wsdl:output message="tns:RetornaOrcamentoV2HttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RetornaOrcamento">
+      <wsdl:input message="tns:RetornaOrcamentoHttpPostIn" />
+      <wsdl:output message="tns:RetornaOrcamentoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RetornaEndereco">
+      <wsdl:input message="tns:RetornaEnderecoHttpPostIn" />
+      <wsdl:output message="tns:RetornaEnderecoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RetornaStatusDoObjeto">
+      <wsdl:input message="tns:RetornaStatusDoObjetoHttpPostIn" />
+      <wsdl:output message="tns:RetornaStatusDoObjetoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RetornaStatusCompletoDoObjeto">
+      <wsdl:input message="tns:RetornaStatusCompletoDoObjetoHttpPostIn" />
+      <wsdl:output message="tns:RetornaStatusCompletoDoObjetoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="solicitarAutorizacaoDePostagem">
+      <wsdl:input message="tns:solicitarAutorizacaoDePostagemHttpPostIn" />
+      <wsdl:output message="tns:solicitarAutorizacaoDePostagemHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RetornaEtiquetasParaImpressao">
+      <wsdl:input message="tns:RetornaEtiquetasParaImpressaoHttpPostIn" />
+      <wsdl:output message="tns:RetornaEtiquetasParaImpressaoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RetornaURLEtiquetas">
+      <wsdl:input message="tns:RetornaURLEtiquetasHttpPostIn" />
+      <wsdl:output message="tns:RetornaURLEtiquetasHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AtualizarRegistro">
+      <wsdl:input message="tns:AtualizarRegistroHttpPostIn" />
+      <wsdl:output message="tns:AtualizarRegistroHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AtualizarRegistroContingencia">
+      <wsdl:input message="tns:AtualizarRegistroContingenciaHttpPostIn" />
+      <wsdl:output message="tns:AtualizarRegistroContingenciaHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BuscaDadosPLP">
+      <wsdl:input message="tns:BuscaDadosPLPHttpPostIn" />
+      <wsdl:output message="tns:BuscaDadosPLPHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RetornaObjetosPostados">
+      <wsdl:input message="tns:RetornaObjetosPostadosHttpPostIn" />
+      <wsdl:output message="tns:RetornaObjetosPostadosHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BuscaEtiquetaPorPedido">
+      <wsdl:input message="tns:BuscaEtiquetaPorPedidoHttpPostIn" />
+      <wsdl:output message="tns:BuscaEtiquetaPorPedidoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BuscaEtiquetaPorNF">
+      <wsdl:input message="tns:BuscaEtiquetaPorNFHttpPostIn" />
+      <wsdl:output message="tns:BuscaEtiquetaPorNFHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RetornaObjetosPostadosPorUsuario">
+      <wsdl:input message="tns:RetornaObjetosPostadosPorUsuarioHttpPostIn" />
+      <wsdl:output message="tns:RetornaObjetosPostadosPorUsuarioHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RetornaPostadosPorUsuario">
+      <wsdl:input message="tns:RetornaPostadosPorUsuarioHttpPostIn" />
+      <wsdl:output message="tns:RetornaPostadosPorUsuarioHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RetornaDadosPrePostagem">
+      <wsdl:input message="tns:RetornaDadosPrePostagemHttpPostIn" />
+      <wsdl:output message="tns:RetornaDadosPrePostagemHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RetornaObjetosPostadosPorFilial">
+      <wsdl:input message="tns:RetornaObjetosPostadosPorFilialHttpPostIn" />
+      <wsdl:output message="tns:RetornaObjetosPostadosPorFilialHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidarRegistro">
+      <wsdl:input message="tns:ValidarRegistroHttpPostIn" />
+      <wsdl:output message="tns:ValidarRegistroHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="Service1Soap" type="tns:Service1Soap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="PrePostarObjetoComRegistro">
+      <soap:operation soapAction="http://webservice.prepostagem.com.br/MpWebService.asmx/PrePostarObjetoComRegistro" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PrePostarObjeto">
+      <soap:operation soapAction="http://webservice.prepostagem.com.br/MpWebService.asmx/PrePostarObjeto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PrePostarObjetoV4">
+      <soap:operation soapAction="http://webservice.prepostagem.com.br/MpWebService.asmx/PrePostarObjetoV4" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PrePostarObjetoV4">
+      <soap:operation soapAction="http://webservice.prepostagem.com.br/MpWebService.asmx/PrePostarObjetoV4_withCpfCnpjParameter" style="document" />
+      <wsdl:input name="PrePostarObjetoV4_withCpfCnpjParameter">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="PrePostarObjetoV4_withCpfCnpjParameter">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PrePostarObjetoV5">
+      <soap:operation soapAction="http://webservice.prepostagem.com.br/MpWebService.asmx/PrePostarObjetoV5" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidarPostagem">
+      <soap:operation soapAction="http://webservice.prepostagem.com.br/MpWebService.asmx/ValidarPostagem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetornaOrcamentoV2">
+      <soap:operation soapAction="http://webservice.prepostagem.com.br/MpWebService.asmx/RetornaOrcamentoV2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetornaOrcamento">
+      <soap:operation soapAction="http://webservice.prepostagem.com.br/MpWebService.asmx/RetornaOrcamento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetornaEndereco">
+      <soap:operation soapAction="http://webservice.prepostagem.com.br/MpWebService.asmx/RetornaEndereco" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetornaStatusDoObjeto">
+      <soap:operation soapAction="http://webservice.prepostagem.com.br/MpWebService.asmx/RetornaStatusDoObjeto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetornaStatusCompletoDoObjeto">
+      <soap:operation soapAction="http://webservice.prepostagem.com.br/MpWebService.asmx/RetornaStatusCompletoDoObjeto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="solicitarAutorizacaoDePostagem">
+      <soap:operation soapAction="http://webservice.prepostagem.com.br/MpWebService.asmx/solicitarAutorizacaoDePostagem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PrePostarObjetoCompleto">
+      <soap:operation soapAction="http://webservice.prepostagem.com.br/MpWebService.asmx/PrePostarObjetoCompleto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetornaEtiquetasParaImpressao">
+      <soap:operation soapAction="http://webservice.prepostagem.com.br/MpWebService.asmx/RetornaEtiquetasParaImpressao" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetornaURLEtiquetas">
+      <soap:operation soapAction="http://webservice.prepostagem.com.br/MpWebService.asmx/RetornaURLEtiquetas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AtualizaDadosAcc1">
+      <soap:operation soapAction="http://webservice.prepostagem.com.br/MpWebService.asmx/AtualizaDadosAcc1" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AtualizarRegistro">
+      <soap:operation soapAction="http://webservice.prepostagem.com.br/MpWebService.asmx/AtualizarRegistro" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AtualizarRegistroContingencia">
+      <soap:operation soapAction="http://webservice.prepostagem.com.br/MpWebService.asmx/AtualizarRegistroContingencia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscaDadosPLP">
+      <soap:operation soapAction="http://webservice.prepostagem.com.br/MpWebService.asmx/BuscaDadosPLP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetornaObjetosPostados">
+      <soap:operation soapAction="http://webservice.prepostagem.com.br/MpWebService.asmx/RetornaObjetosPostados" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscaEtiquetaPorPedido">
+      <soap:operation soapAction="http://webservice.prepostagem.com.br/MpWebService.asmx/BuscaEtiquetaPorPedido" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscaEtiquetaPorNF">
+      <soap:operation soapAction="http://webservice.prepostagem.com.br/MpWebService.asmx/BuscaEtiquetaPorNF" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetornaObjetosPostadosPorUsuario">
+      <soap:operation soapAction="http://webservice.prepostagem.com.br/MpWebService.asmx/RetornaObjetosPostadosPorUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetornaPostadosPorUsuario">
+      <soap:operation soapAction="http://webservice.prepostagem.com.br/MpWebService.asmx/RetornaPostadosPorUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetornaDadosPrePostagem">
+      <soap:operation soapAction="http://webservice.prepostagem.com.br/MpWebService.asmx/RetornaDadosPrePostagem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetornaObjetosPostadosPorFilial">
+      <soap:operation soapAction="http://webservice.prepostagem.com.br/MpWebService.asmx/RetornaObjetosPostadosPorFilial" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidarRegistro">
+      <soap:operation soapAction="http://webservice.prepostagem.com.br/MpWebService.asmx/ValidarRegistro" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="Service1Soap12" type="tns:Service1Soap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="PrePostarObjetoComRegistro">
+      <soap12:operation soapAction="http://webservice.prepostagem.com.br/MpWebService.asmx/PrePostarObjetoComRegistro" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PrePostarObjeto">
+      <soap12:operation soapAction="http://webservice.prepostagem.com.br/MpWebService.asmx/PrePostarObjeto" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PrePostarObjetoV4">
+      <soap12:operation soapAction="http://webservice.prepostagem.com.br/MpWebService.asmx/PrePostarObjetoV4" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PrePostarObjetoV4">
+      <soap12:operation soapAction="http://webservice.prepostagem.com.br/MpWebService.asmx/PrePostarObjetoV4_withCpfCnpjParameter" style="document" />
+      <wsdl:input name="PrePostarObjetoV4_withCpfCnpjParameter">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="PrePostarObjetoV4_withCpfCnpjParameter">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PrePostarObjetoV5">
+      <soap12:operation soapAction="http://webservice.prepostagem.com.br/MpWebService.asmx/PrePostarObjetoV5" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidarPostagem">
+      <soap12:operation soapAction="http://webservice.prepostagem.com.br/MpWebService.asmx/ValidarPostagem" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetornaOrcamentoV2">
+      <soap12:operation soapAction="http://webservice.prepostagem.com.br/MpWebService.asmx/RetornaOrcamentoV2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetornaOrcamento">
+      <soap12:operation soapAction="http://webservice.prepostagem.com.br/MpWebService.asmx/RetornaOrcamento" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetornaEndereco">
+      <soap12:operation soapAction="http://webservice.prepostagem.com.br/MpWebService.asmx/RetornaEndereco" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetornaStatusDoObjeto">
+      <soap12:operation soapAction="http://webservice.prepostagem.com.br/MpWebService.asmx/RetornaStatusDoObjeto" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetornaStatusCompletoDoObjeto">
+      <soap12:operation soapAction="http://webservice.prepostagem.com.br/MpWebService.asmx/RetornaStatusCompletoDoObjeto" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="solicitarAutorizacaoDePostagem">
+      <soap12:operation soapAction="http://webservice.prepostagem.com.br/MpWebService.asmx/solicitarAutorizacaoDePostagem" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PrePostarObjetoCompleto">
+      <soap12:operation soapAction="http://webservice.prepostagem.com.br/MpWebService.asmx/PrePostarObjetoCompleto" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetornaEtiquetasParaImpressao">
+      <soap12:operation soapAction="http://webservice.prepostagem.com.br/MpWebService.asmx/RetornaEtiquetasParaImpressao" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetornaURLEtiquetas">
+      <soap12:operation soapAction="http://webservice.prepostagem.com.br/MpWebService.asmx/RetornaURLEtiquetas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AtualizaDadosAcc1">
+      <soap12:operation soapAction="http://webservice.prepostagem.com.br/MpWebService.asmx/AtualizaDadosAcc1" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AtualizarRegistro">
+      <soap12:operation soapAction="http://webservice.prepostagem.com.br/MpWebService.asmx/AtualizarRegistro" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AtualizarRegistroContingencia">
+      <soap12:operation soapAction="http://webservice.prepostagem.com.br/MpWebService.asmx/AtualizarRegistroContingencia" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscaDadosPLP">
+      <soap12:operation soapAction="http://webservice.prepostagem.com.br/MpWebService.asmx/BuscaDadosPLP" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetornaObjetosPostados">
+      <soap12:operation soapAction="http://webservice.prepostagem.com.br/MpWebService.asmx/RetornaObjetosPostados" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscaEtiquetaPorPedido">
+      <soap12:operation soapAction="http://webservice.prepostagem.com.br/MpWebService.asmx/BuscaEtiquetaPorPedido" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscaEtiquetaPorNF">
+      <soap12:operation soapAction="http://webservice.prepostagem.com.br/MpWebService.asmx/BuscaEtiquetaPorNF" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetornaObjetosPostadosPorUsuario">
+      <soap12:operation soapAction="http://webservice.prepostagem.com.br/MpWebService.asmx/RetornaObjetosPostadosPorUsuario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetornaPostadosPorUsuario">
+      <soap12:operation soapAction="http://webservice.prepostagem.com.br/MpWebService.asmx/RetornaPostadosPorUsuario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetornaDadosPrePostagem">
+      <soap12:operation soapAction="http://webservice.prepostagem.com.br/MpWebService.asmx/RetornaDadosPrePostagem" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetornaObjetosPostadosPorFilial">
+      <soap12:operation soapAction="http://webservice.prepostagem.com.br/MpWebService.asmx/RetornaObjetosPostadosPorFilial" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidarRegistro">
+      <soap12:operation soapAction="http://webservice.prepostagem.com.br/MpWebService.asmx/ValidarRegistro" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="Service1HttpGet" type="tns:Service1HttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="PrePostarObjetoComRegistro">
+      <http:operation location="/PrePostarObjetoComRegistro" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PrePostarObjeto">
+      <http:operation location="/PrePostarObjeto" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetornaOrcamentoV2">
+      <http:operation location="/RetornaOrcamentoV2" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetornaOrcamento">
+      <http:operation location="/RetornaOrcamento" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetornaEndereco">
+      <http:operation location="/RetornaEndereco" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetornaStatusDoObjeto">
+      <http:operation location="/RetornaStatusDoObjeto" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetornaStatusCompletoDoObjeto">
+      <http:operation location="/RetornaStatusCompletoDoObjeto" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="solicitarAutorizacaoDePostagem">
+      <http:operation location="/solicitarAutorizacaoDePostagem" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetornaEtiquetasParaImpressao">
+      <http:operation location="/RetornaEtiquetasParaImpressao" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetornaURLEtiquetas">
+      <http:operation location="/RetornaURLEtiquetas" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AtualizarRegistro">
+      <http:operation location="/AtualizarRegistro" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AtualizarRegistroContingencia">
+      <http:operation location="/AtualizarRegistroContingencia" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscaDadosPLP">
+      <http:operation location="/BuscaDadosPLP" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetornaObjetosPostados">
+      <http:operation location="/RetornaObjetosPostados" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscaEtiquetaPorPedido">
+      <http:operation location="/BuscaEtiquetaPorPedido" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscaEtiquetaPorNF">
+      <http:operation location="/BuscaEtiquetaPorNF" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetornaObjetosPostadosPorUsuario">
+      <http:operation location="/RetornaObjetosPostadosPorUsuario" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetornaPostadosPorUsuario">
+      <http:operation location="/RetornaPostadosPorUsuario" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetornaDadosPrePostagem">
+      <http:operation location="/RetornaDadosPrePostagem" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetornaObjetosPostadosPorFilial">
+      <http:operation location="/RetornaObjetosPostadosPorFilial" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidarRegistro">
+      <http:operation location="/ValidarRegistro" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="Service1HttpPost" type="tns:Service1HttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="PrePostarObjetoComRegistro">
+      <http:operation location="/PrePostarObjetoComRegistro" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PrePostarObjeto">
+      <http:operation location="/PrePostarObjeto" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetornaOrcamentoV2">
+      <http:operation location="/RetornaOrcamentoV2" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetornaOrcamento">
+      <http:operation location="/RetornaOrcamento" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetornaEndereco">
+      <http:operation location="/RetornaEndereco" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetornaStatusDoObjeto">
+      <http:operation location="/RetornaStatusDoObjeto" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetornaStatusCompletoDoObjeto">
+      <http:operation location="/RetornaStatusCompletoDoObjeto" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="solicitarAutorizacaoDePostagem">
+      <http:operation location="/solicitarAutorizacaoDePostagem" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetornaEtiquetasParaImpressao">
+      <http:operation location="/RetornaEtiquetasParaImpressao" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetornaURLEtiquetas">
+      <http:operation location="/RetornaURLEtiquetas" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AtualizarRegistro">
+      <http:operation location="/AtualizarRegistro" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AtualizarRegistroContingencia">
+      <http:operation location="/AtualizarRegistroContingencia" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscaDadosPLP">
+      <http:operation location="/BuscaDadosPLP" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetornaObjetosPostados">
+      <http:operation location="/RetornaObjetosPostados" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscaEtiquetaPorPedido">
+      <http:operation location="/BuscaEtiquetaPorPedido" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscaEtiquetaPorNF">
+      <http:operation location="/BuscaEtiquetaPorNF" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetornaObjetosPostadosPorUsuario">
+      <http:operation location="/RetornaObjetosPostadosPorUsuario" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetornaPostadosPorUsuario">
+      <http:operation location="/RetornaPostadosPorUsuario" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetornaDadosPrePostagem">
+      <http:operation location="/RetornaDadosPrePostagem" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetornaObjetosPostadosPorFilial">
+      <http:operation location="/RetornaObjetosPostadosPorFilial" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidarRegistro">
+      <http:operation location="/ValidarRegistro" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="Service1Soap" binding="tns:Service1Soap">
+      <soap:address location="http://webservice.prepostagem.com.br/MpWebService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="Service1Soap12" binding="tns:Service1Soap12">
+      <soap12:address location="http://webservice.prepostagem.com.br/MpWebService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="Service1HttpGet" binding="tns:Service1HttpGet">
+      <http:address location="http://webservice.prepostagem.com.br/MpWebService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="Service1HttpPost" binding="tns:Service1HttpPost">
+      <http:address location="http://webservice.prepostagem.com.br/MpWebService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
